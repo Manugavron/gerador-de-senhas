@@ -1,0 +1,119 @@
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #d1d5db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container Principal */
+.card {
+  background: linear-gradient(180deg, #a7a3a8 0%, #bd93d8 100%);
+  width: 100%;
+  max-width: 420px;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  color: #311b92;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #2a105c;
+}
+
+/* Campo de exibicao da senha */
+.output-box {
+  background-color: #8372cb;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.output-box span {
+  word-break: break-all;
+}
+
+.btn-copy {
+  background-color: #5c35ad;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.btn-copy:hover {
+  background-color: #432187;
+}
+
+/* Secao de Opcoes */
+.options-box {
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #2a105c;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #2a105c;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.option-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #5c35ad;
+  cursor: pointer;
+}
+
+/* Botao de Gerar */
+.btn-generate {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: #5c35ad;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-generate:hover {
+  background-color: #432187;
+}
+</style>
