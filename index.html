@@ -169,12 +169,12 @@ transition: background-color 0.2s;
       if (document.getElementById("symbols").checked) validChars += symbols;
 
       if (validChars === "") {
-        alert("Selecione pelo menos uma opção!");
+        alert("Selecione pelo menos uma opcao!");
         return;
       }
 
       let password = "";
-      const length = 12; // Tamanho padrão da senha
+      const length = 12; // Tamanho padrao da senha
 
       for (let i = 0; i < length; i++) {
         const randomIndex = Math.floor(Math.random() * validChars.length);
@@ -184,12 +184,12 @@ transition: background-color 0.2s;
       document.getElementById("passwordDisplay").innerText = password;
     }
 
-    function copiarSenha() {
+      function copiarSenha() {
       const password = document.getElementById("passwordDisplay").innerText;
       if (password === "---" || !password) return;
 
-      navigator.clipboard.writeText(password);      alert("Senha copiada para a área de transferência!")
-         
+      navigator.clipboard.writeText(password);
+      alert("Senha copiada para a area de transferencia!");
         </script>
 </body>
 </html>
