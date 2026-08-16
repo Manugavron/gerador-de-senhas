@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de senhas</title>
-</head>
 <style>
     {
  box-sizing:border-box;
@@ -64,7 +63,7 @@ transition: background 0.2s;
 .btn-copy: hover{
  background-color: #432187;
 }
-/* Seção de Opçõẽs*/
+/* Secao de Opcoes*/
 .options-box{
 background-color: rgba(255, 255, 255, 0.25);
 background-filter: blur(5px);
@@ -95,7 +94,7 @@ height: 18px;
 accent-color: #5c35ad;
 cursor: pointer;
  }
-/* Botão de Gerar*/
+/* Botao de Gerar*/
 .btn-generate{
 width: 100%;
 margin-top: 20px;
@@ -107,10 +106,133 @@ color: white;
 font-size: 1rem;
 font-weight: bold;
 cursor: pointer;
-transition: ;
+transition: background-color 0.2s;
 }
+
+.btn-generate:hover{
+    background-color: #432187;
+}
+</head>
 </style>
 <body>
-    
+  <div class="card">
+    <h1 class="title">Gerador de Senhas</h1>
+    <div class="output-box">
+        <span>Senha:<strong id="passwordDisplay">---</strong></span>
+        <button class="btn-copy"
+        onclick="copiaSenha()">Copiar</button>
+        </div>
+
+        <div class="options-box">
+            <h2 class="subtitle">personalize sua Senha</h2>
+            
+            <label class="option-item">
+                <input type="checkbox"
+                id="uppercase" checked>
+                Letras Maiuscula
+                </label>
+            
+            <label class="option-item">
+                <input type="checkbox"
+                id="lowercase" checked>
+                Letras Minusculas
+                </label>
+            
+            <label class="option-item">
+                <input type="checkbox"
+                id="numberts" checked>
+                Numbers
+                </label>
+            
+            <label class="option-item">
+                <input type="checkbox"
+                id="symbolos">
+                Simbolos
+
+                <button class="btn-generate"
+                onclick="gerarSenha"()>Gerar Senha</button>
+                </label>
+            </div>
+    </div>
+
+    <script>
+      function gerarSenha()  {
+      const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      const lowercase = "abcdefghijklmnopqrstuvwxyz";
+      const numbers = "0123456789";
+      const symbols = "!@#$%^&*()_+-=[]{}|;:,.<>?";
+
+      let validChars = "";
+      if (document.getElementById("uppercase").checked) validChars += uppercase;
+      if (document.getElementById("lowercase").checked) validChars += lowercase;
+      if (document.getElementById("numbers").checked) validChars += numbers;
+      if (document.getElementById("symbols").checked) validChars += symbols;
+
+      if (validChars === "") {
+        alert("Selecione pelo menos uma opção!");
+        return;
+      }
+
+      let password = "";
+      const length = 12; // Tamanho padrão da senha
+
+      for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * validChars.length);
+        password += validChars[randomIndex];
+      }
+
+      document.getElementById("passwordDisplay").innerText = password;
+    }
+
+    function copiarSenha() {
+      const password = document.getElementById("passwordDisplay").innerText;
+      if (password === "---" || !password) return;
+
+      navigator.clipboard.writeText(password);
+      alert("Senha copiada para a área de transferência!");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </script>
 </body>
 </html>
